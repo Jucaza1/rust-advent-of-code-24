@@ -6,8 +6,8 @@ use std::{
 };
 
 fn main() {
-    // let file = File::open("./examples/day-01-part-01/input-test.txt").expect("file not found");
-    let file = File::open("./examples/day-01-part-01/input.txt").expect("file not found");
+    // let file = File::open("./examples/day-01-part-02/input-test.txt").expect("file not found");
+    let file = File::open("./examples/day-01-part-02/input.txt").expect("file not found");
     let buff = BufReader::new(file);
     let mut acc = 0;
     let (mut left_v, mut right_v): (Vec<i32>, Vec<i32>) = (Vec::new(), Vec::new());
