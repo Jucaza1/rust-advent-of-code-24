@@ -17,8 +17,8 @@ fn main() {
 }
 fn process_matrix(m: &[Vec<char>]) -> i32 {
     let mut acc = 0i32;
-    for row in 0..m.len() {
-        for col in 0..m[0].len() {
+    for row in 1..m.len()-1 {
+        for col in 1..m[0].len()-1 {
             if WORD[0] == m[row][col] && 2 == find_char(m, Dir::All, row as i32, col as i32, 0) {
                 acc += 1
             }
