@@ -53,7 +53,6 @@ fn main() {
     let path: Vec<Point<i64>> = Vec::new();
     let mut min_score = i64::MAX;
 
-    // print_matrix(&matrix);
     let _ = walk_maze(
         Direction::Right,
         pos,
@@ -64,9 +63,6 @@ fn main() {
         path,
         &mut min_score,
     );
-    // let Some(score) = scores.iter().min() else {
-    //     panic!("expected scores not to be empty");
-    // };
     let mut paths_set: HashSet<Point<i64>> = HashSet::new();
     let mut min_score = i64::MAX;
     for (s, _) in scores.iter() {
@@ -89,22 +85,6 @@ fn main() {
     print_matrix(&matrix);
     println!("Result -> {} with score of {}", paths_set.len(), min_score);
 }
-// fn find_paths(dir:Direction,pos:Point<i64>)->HashSet<i64>{
-//     let mut scores = HashSet::<i64>::new();
-//     let mut queue = VecDeque::<Point<i64>>::new();
-//     let
-//     queue.push_back(pos);
-//     while !queue.is_empty(){
-//         let Some(current) = queue.pop_front() else{
-//             unreachable!();
-//         };
-//         //check if we can go in any of the 4 directions
-//         for
-//
-//     }
-//     scores
-//
-// }
 fn walk_maze(
     mut dir: Direction,
     pos: Point<i64>,
@@ -194,7 +174,7 @@ fn walk_maze(
         path.pop();
         return State::Stuck;
     }
-    return State::Walkable;
+    State::Walkable
 }
 fn print_matrix(m: &[Vec<Option<char>>]) {
     for i in 0..m.len() {
